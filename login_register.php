@@ -92,7 +92,7 @@ if(isset($_POST['register']))
             showErrorAlert("$email - E-mail already registered", "login_register.php");
         }
     } else {
-        $query = "INSERT INTO registered_user (`FullName`, `Username`, `E-mail`, `Password`) VALUES (?, ?, ?, ?)";
+        $query = "INSERT INTO registered_user (`Full Name`, `Username`, `E-mail`, `Password`) VALUES (?, ?, ?, ?)";
         $stmt = mysqli_prepare($con, $query);
         mysqli_stmt_bind_param($stmt, "ssss", $fullname, $username, $email, $hashed_password); // Use hashed password
         if(mysqli_stmt_execute($stmt)) {
