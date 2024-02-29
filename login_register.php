@@ -87,9 +87,9 @@ if(isset($_POST['register']))
     if($result && mysqli_num_rows($result) > 0) {
         $result_fetch = mysqli_fetch_assoc($result);
         if($result_fetch['Username'] == $username) {
-            showErrorAlert("$username - Username already taken", "index.php");
+            showErrorAlert("$username - Username already taken", "login_register.php");
         } elseif ($result_fetch['E-mail'] == $email) {
-            showErrorAlert("$email - E-mail already registered", "index.php");
+            showErrorAlert("$email - E-mail already registered", "login_register.php");
         }
     } else {
         $query = "INSERT INTO registered_user (`FullName`, `Username`, `E-mail`, `Password`) VALUES (?, ?, ?, ?)";
