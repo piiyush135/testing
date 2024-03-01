@@ -64,10 +64,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $stmt = mysqli_prepare($con, $query);
                 mysqli_stmt_bind_param($stmt, "ssss", $fullname, $username, $email, $hashed_password);
                 if (mysqli_stmt_execute($stmt)) {
-                    // Registration successful
-                    header("Location: index.php?registration_success=true");
-                    exit();
-
+                   // Registration successful
+              echo "<script>alert('Registration successful');</script>";
+             // Redirect to index.php with registration success parameter
+             header("Location: index.php?registration_success=true");
+             exit();
                 } else {
                     // Registration failed
                     showErrorAlert("Cannot run query");
