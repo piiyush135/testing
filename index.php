@@ -32,7 +32,6 @@
  <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
-                <!-- Login Form -->
                 <form action="login_register.php" method="POST" class="sign-in-form">
                     <h2 class="title">Login</h2>
                     <div class="input-field">
@@ -40,30 +39,28 @@
                         <input type="text" name="username" placeholder="Username" required>
                     </div>
                     <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" name="password" placeholder="Password" required>
+                        <i class="fas fa-lock togglePassword" onclick="togglePasswordVisibility()"></i>
+                        <input type="password" name="password" id="passwordField" placeholder="Password" required>
                     </div>
-                    <input type="submit" value="Login" class="btn solid">
-            <p class="social-text">Or Login with social platforms</p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div>
-          </form>
+                    <input type="submit" value="Login" class="btn solid" name="login">
+                    <p class="social-text">Or Login with social platforms</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </form>
 
-
-           <!-- Registration Form -->
-           <form action="login_register.php" method="POST" class="sign-up-form">
+                <form action="login_register.php" method="POST" class="sign-up-form">
                     <h2 class="title">Register</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
@@ -81,15 +78,15 @@
                         <i class="fas fa-lock"></i>
                         <input type="password" name="password" placeholder="Password" required>
                     </div>
-                    <input type="submit" value="Register" class="btn solid">
-            <p class="social-text">Or Register with social platforms</p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-              </a>
+                    <input type="submit" value="Register" class="btn solid" name="register">
+                    <p class="social-text">Or Register with social platforms</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
               <a href="#" class="social-icon">
                 <i class="fab fa-google"></i>
               </a>
