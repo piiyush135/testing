@@ -1,4 +1,9 @@
-<?php require('connection.php'); ?>
+<?php require('connection.php');
+// Check if registration success parameter is present in the URL
+if (isset($_GET['registration_success']) && $_GET['registration_success'] === 'true') {
+    echo "<script>alert('Registration successful');</script>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
