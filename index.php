@@ -12,14 +12,13 @@ if (isset($_GET['registration_success']) && $_GET['registration_success'] == 'tr
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <script
       src="https://kit.fontawesome.com/64d58efce2.js"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
 </head>
 <body>
-  <script>
+ <script>
     function togglePasswordVisibility() {
         var passwordField = document.getElementById("passwordField");
-        var passwordButton = document.querySelector("togglePassword");
+        var passwordButton = document.querySelector(".togglePassword");
 
         if (passwordField.type === "password") {
             passwordField.type = "text";
@@ -28,8 +27,9 @@ if (isset($_GET['registration_success']) && $_GET['registration_success'] == 'tr
             passwordField.type = "password";
             passwordButton.textContent = "👁";
         }
-  }
+    }
 </script>
+
  <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
