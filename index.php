@@ -1,4 +1,8 @@
-<?php require('connection.php');?>
+<?php require('connection.php');
+if (isset($_GET['registration_success']) && $_GET['registration_success'] == 'true') {
+    echo "<script>alert('Registration successful');</script>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
