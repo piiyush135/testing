@@ -22,7 +22,7 @@ if (isset($_GET['registration_success']) && $_GET['registration_success'] == 'tr
 
         if (passwordField.type === "password") {
             passwordField.type = "text";
-            passwordButton.textContent = "👁";
+            passwordButton.textContent = "👁‍🗨";
         } else {
             passwordField.type = "password";
             passwordButton.textContent = "👁";
