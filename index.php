@@ -18,19 +18,16 @@ if (isset($_GET['registration_success']) && $_GET['registration_success'] == 'tr
  <script>
     function togglePasswordVisibility() {
         var passwordField = document.getElementById("passwordField");
-        var passwordButton = document.querySelector(".togglePassword");
 
         if (passwordField.type === "password") {
             passwordField.type = "text";
-            passwordButton.textContent = "👁‍🗨";
         } else {
             passwordField.type = "password";
-            passwordButton.textContent = "👁";
         }
     }
 </script>
 
- <div class="container">
+<div class="container">
         <div class="forms-container">
             <div class="signin-signup">
                 <form action="login_register.php" method="POST" class="sign-in-form">
