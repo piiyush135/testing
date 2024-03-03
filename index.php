@@ -30,8 +30,6 @@ if (isset($_GET['registration_success']) && $_GET['registration_success'] == 'tr
         }
   }
 </script>
-  
- <body>
  <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
