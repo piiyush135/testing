@@ -13,8 +13,6 @@ if (isset($_GET['registration_success']) && $_GET['registration_success'] == 'tr
     <script
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"></script>
-</head>
-<body>
  <script>
     function togglePasswordVisibility() {
         var passwordField = document.getElementById("passwordField");
@@ -25,8 +23,25 @@ if (isset($_GET['registration_success']) && $_GET['registration_success'] == 'tr
             passwordField.type = "password";
         }
     }
-</script>
+ function validateEmail(email) {
+// Regular expression for email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
 
+function validateForm() {
+    var emailInput = document.getElementById("email").value;
+    
+    if (!validateEmail(emailInput)) {
+        alert("Please enter a valid email address.");
+        return false; // Prevent form submission
+    }
+    // Proceed with form submission
+    return true;
+}
+ </script>    
+</head>
+<body>
 <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
