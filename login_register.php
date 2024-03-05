@@ -38,7 +38,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $username = $_POST['username'];
         $email = $_POST['email'];
         $password = $_POST['password'];
-
+       
+      if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "<script>alert('Invalid email address');</script>";
+    } else {
+        // Proceed with registration logic   
+        // Insert user data into the database
+         }
+        
         if (empty($fullname) || empty($username) || empty($email) || empty($password)) {
             showErrorAlert("Please fill in all fields");
         } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
