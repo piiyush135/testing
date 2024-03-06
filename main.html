@@ -9,19 +9,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script>
-            function redirectToNewPage() {
-                // Redirect to the new page
-                window.location.href = "topper1.html";
-            }
-        </script>
-          <script>
-            function redirectToNewPage2() {
-                // Redirect to the new page
-                window.location.href = "topper2.html";
-            }
-        </script>
-     
+    <script>
+        function redirectToNewPage() {
+            // Redirect to the new page
+            window.location.href = "topper1.html";
+        }
+    </script>
+    <script>
+        function redirectToNewPage2() {
+            // Redirect to the new page
+            window.location.href = "topper2.html";
+        }
+    </script>
 </head>
 
 <body>
@@ -30,7 +29,9 @@
             <img src="college-sahayta-high-resolution-logo-transparent.png" alt="logo">
         </div>
         <div class="page">
-            <p style="background-image: url('./high-angle-view-laptop-stationeries-blue-background.jpg');"></p>
+            <p
+                style="background-image: url('./high-angle-view-laptop-stationeries-blue-background.jpg');background-size:cover;">
+            </p>
             <div class="logo">
                 <img src="open-book-hand-pointing-icon.png" alt="website logo">
 
@@ -38,38 +39,55 @@
             <h1>Welcome To E-Learning Platform</h1>
             <!-- Navigation Menu -->
             <nav>
-                    <ul>
-                        <li><i class="fa-solid fa-house"></i><a href="index.html">Home</a></li>
-                        <li><i class="fa-solid fa-book-open-reader"></i><li class="dropdown">
-                          <a href="javascript:void(0)" class="dropbtn">Course</a>
-                          <div class="dropdown-content">
-                            <a href="BCA.html">BCA</a>
-                            <a href="BCH.html">BCH</a>
-                            <a href="MBA.html">MBA</a>
-                            <a href="BBA.html">BBA</a>
-                            <li><i class="fa-solid fa-address-book"></i><li class="dropdown">
-                                <a href=""class="dropbtn">Contact</a>
-                                <div class="dropdown-content">
-                                  <a href="contact.html">Contact-us</a>
-                                  <a href="#">Student Feedback</a>
-                    <li><i class="fa-solid fa-book-open-reader"></i><li class="dropdown">
-                        <a href="index.php" class="dropbtn">LogOut</a>
-                    <!-- Add link to login page -->
-                          </div>
-                        </li>
-                      </ul>
+                <ul>
+                    <li><i class="fa-solid fa-house"></i><a href="main.html">Home</a></li>
+                    <li><i class="fa-solid fa-book-open-reader"></i>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Course</a>
+                        <div class="dropdown-content">
+                            <a href="BCA.HTML">BCA</a>
+                            <a href="#">B.COM</a>
+                            <a href="#">MBA</a>
+                            <a href="#">BBA</a>
+                    <li><i class="fa-solid fa-address-book"></i>
+                    <li class="dropdown">
+                        <a href="" class="dropbtn">Contact</a>
+                        <div class="dropdown-content">
+                            <a href="contact.html">Contact-us</a>
+                            <a href="#">Student Feedback</a>
+                    <li><i class="fa-solid fa-book-open-reader"></i>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Login</a>
+                        <div class="dropdown-content">
+
+                            <a href="login.html">Student</a>
+                            <!-- Add link to login page -->
+                        </div>
+                    </li>
+
+                </ul>
                 </ul>
             </nav>
+
+
     </header>
     <main>
         <section id="home">
-            <h2 style="text-align:center;font-size: 30px;">Welcome to our website!</h2>
+            <div class="container">
+                <div id="subheading"></div>
+            </div>
+
+            <script src="script.js"></script>
+
+            <!-- <h2 style="text-align:center;font-size: 30px;">Welcome to our website!</h2> -->
             <p style="text-align: center;">Find previous years' question papers and notes for various courses.</p>
             <!-- Search Bar -->
+
             <form style="text-align: center;" onsubmit="searchCourse(event)">
-                <input type="text" id="searchInput" name="search" placeholder="Search...">
+                <input type="text" id="searchInput" name="search" placeholder="Search course...">
                 <button type="submit">Search</button>
             </form>
+
             <script>
                 function searchCourse(event) {
                     event.preventDefault(); // Prevent default form submission behavior
@@ -80,67 +98,112 @@
                     } else if (searchTerm === "bba") {
                         window.location.href = "bba.html"; // Redirect to BBA page
                     } else if (searchTerm === "bcom") {
-                        window.location.href = "bch.html"; // Redirect to BCH page
+                        window.location.href = "bcom.html"; // Redirect to BCom page
                     } else if (searchTerm === "mba") {
                         window.location.href = "mba.html"; // Redirect to MBA page
                     } else {
                         alert("Course not found!"); // Display an alert if course not found
                     }
                 }
-                </script>
+            </script>
+
         </section>
         <section id="Course">
-            <h2 style="text-align: center ; left: 40%;font-size: 45px;">Courses</h2>
+            <h2 style="text-align: center ; left: 40%;  font-size: 45px; margin-bottom:125px;">Courses</h2>
             <!-- Course Listings -->
             <div class="container">
                 <div class="card">
-                    <img src="Bca image.jpg" alt="BCA" class="card-img-top">
+                    <img src="BCA image.jpeg" alt="Sora" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">BCA</h5>
-                        <p class="card-text">BCA program curriculum provides a foundation in computer science, programming concepts,
+                        <p class="card-text">BCA program curriculum provides a foundation in computer science,
+                            programming concepts,
                             and applications</p>
-                        <a href="BCA.html" class="btn">More</a>
+                        <a href="BCA.HTML" class="btn">More</a>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="bcom-honours.jpg" alt="BCH" class="card-img-top">
+                    <img src="banner_bcom.jpg" alt="Umi" class="card-img-top">
                     <div class="card-body">
-                        <h5 class="card-title">Bcom</h5>
-                        <p class="card-text">Marketing, Accounting, Taxation, Industrial laws,
-                            Financial accounting, Economics, Auditing, Business management</p>
-                        <a href="BCH.html" class="btn">More</a>
+                        <h5 class="card-title">B.COM</h5>
+                        <p class="card-text">Marketing, Accounting, Entrepreneurship,
+                            Financial accounting, Economics, Company law, Auditing, Business management</p>
+                        <a href="#" class="btn">More</a>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="BBA-Colleges-in-UP.jpeg" alt="BBA" class="card-img-top">
+                    <img src="BBA-Colleges-in-UP.jpeg" alt="Mori" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">BBA</h5>
                         <p class="card-text">Principles of management, Managerial economics,
-                            Financial management, Business law, Accounting, Marketing.</p>
-                        <a href="BBA.html" class="btn">More</a>
+                            Financial management, Business law, Marketing, Operations management.</p>
+                        <a href="#" class="btn">More</a>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="MBA-Life-blog-image-Choosing-MBA.jpg" alt="MBA" class="card-img-top">
+                    <img src="MBA-Life-blog-image-Choosing-MBA.jpg" alt="Mori" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">MBA</h5>
                         <p class="card-text">students develop business skills and knowledge,
                             such as leadership and business acumen.</p>
-                        <a href="MBA.html" class="btn">More</a>
-                    </div>        
-                 </div>
-            </div>
-         </div>
+                        <a href="#" class="btn">More</a>
+                    </div>
+                </div>
+
+
                 <!-- Add more courses as needed -->
-        </div>
+            </div>
+        </section>
+        <section>
+            <h2 style="text-align: center;  font-size:45px; margin-bottom:25px;">Core <span
+                    style="color:#04af2f;">Concepts</span> </h2>
+            <div class="topic-container">
+                <div class="topic-box" id="dsa">
+                    <h5>start learning</h5>
+                    <h2>DSA</h2>
+                    <p>Add notes and resources here...</p>
+                    <a href="dsa.html" class="more-button">More</a>
+                </div>
+                <div class="topic-box" id="python">
+                    <h5>start learning</h5>
+                    <h2>Python</h2>
+                    <p>Add notes and resources here...</p>
+                    <a href="python.html" class="more-button">More</a>
+                </div>
+                <div class="topic-box" id="java">
+                    <h5>start learning</h5>
+                    <h2>Java</h2>
+                    <p>Add notes and resources here...</p>
+                    <a href="java.html" class="more-button">More</a>
+                </div>
+                <div class="topic-box" id="java">
+                    <h5>start learning</h5>
+                    <h2>Java</h2>
+                    <p>Add notes and resources here...</p>
+                    <a href="java.html" class="more-button">More</a>
+                </div>
+                <div class="topic-box" id="java">
+                    <h5>start learning</h5>
+                    <h2>Java</h2>
+                    <p>Add notes and resources here...</p>
+                    <a href="java.html" class="more-button">More</a>
+                </div>
+                <div class="topic-box" id="java">
+                    <h5>start learning</h5>
+                    <h2>Java</h2>
+                    <p>Add notes and resources here...</p>
+                    <a href="java.html" class="more-button">More</a>
+                </div>
+            </div>
         </section>
         <section class="toppers-strategies">
-            <h2 style="text-align: center;  font-size:45px; margin-bottom:25px;">Toppers strategies</h2>
+            <h2 style="text-align: center;  font-size:45px; margin-bottom:25px;">Toppers <span
+                    style="color:#04af2f;">strategies</span></h2>
             <div class="topper-item">
                 <p class="topper-name">Topper 1</p>
                 <p class="topper-notes">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua.</p>
-                <button  onclick="redirectToNewPage()" class="view-more-btn">View More</button>
+                <button onclick="redirectToNewPage()" class="view-more-btn">View More</button>
             </div>
 
             <div class="topper-item">
@@ -149,11 +212,23 @@
                     aliquip ex ea commodo consequat.</p>
                 <button onclick="redirectToNewPage2()" class="view-more-btn">View More</button>
             </div>
-           
+
 
             <!-- Add more topper items as needed -->
 
         </section>
+        <section class="resume-section">
+            <div class="section-content">
+                <h2><span style="color:#04af2f; font-size: 40px; font-weight: bold;">Resume </span>Writing Essentials</h2>
+                <p>Tips, Tricks, and Best Practices<br>Get Started Today!</p>
+                <a href="resume.html" class="learn-more-button">Learn More</a>
+            </div>
+            <div class="section-image">
+                <img src="resume bg.jpg" alt="Image Description">
+            </div>
+        </section>
+        
+
     </main>
     <footer>
         <p>&copy; 2024 Previous Years' Question Papers & Notes</p>
@@ -175,6 +250,7 @@
     <a href="https://wa.me/9012044721" target="_blank" class="whatsapp-button">
         <img src="whatsapp-icon-.png" alt="WhatsApp Logo">
     </a>
+
 </body>
 
 </html>
